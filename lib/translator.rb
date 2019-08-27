@@ -2,11 +2,11 @@ require 'yaml'
 
 
 def load_library(file_path) 
-  unformatted_hash = YAML.load_file(file_path)  
+  hash = YAML.load_file(file_path)  
 
   library_hash = {'get_emoticon' => {}, 'get_meaning' => {}} 
 
-  unformatted_hash.each do |meaning, emoticons| 
+  hash.each do |meaning, emoticons| 
     english = emoticons[0]
     japanese = emoticons[1]
 
@@ -14,7 +14,7 @@ def load_library(file_path)
     library_hash['get_emoticon'][english] = japanese 
 
   end
-  library_hash  # we want to return a hash that has the right functionality
+  library_hash  
 end
 
 
