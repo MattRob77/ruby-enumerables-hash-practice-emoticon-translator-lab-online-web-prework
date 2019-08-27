@@ -27,6 +27,6 @@ end
 
 
 
-def get_english_meaning()
+def get_english_meaning(file_path, emoticon)
   # code goes here
 end
